@@ -1,0 +1,263 @@
+/**
+ * WordPress CDN Integration Admin CSS - Enhanced Version
+ */
+
+/* General Admin Styles */
+.wrap {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* Tab Navigation Styles */
+.cdn-tabs {
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.cdn-tab-nav {
+    display: flex;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e2e4e7;
+}
+
+.cdn-tab-button {
+    padding: 15px 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #50575e;
+    transition: all 0.2s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.cdn-tab-button.active {
+    color: #3582c4;
+    font-weight: 600;
+    border-bottom: 2px solid #3582c4;
+    background-color: #fff;
+}
+
+.cdn-tab-button:hover:not(.active) {
+    color: #135e96;
+    background-color: #f0f0f1;
+}
+
+.cdn-tab-content {
+    padding: 0;
+}
+
+.cdn-tab-pane {
+    display: none;
+    padding: 20px;
+}
+
+.cdn-tab-pane.active {
+    display: block;
+}
+
+/* Dashboard Styles */
+.cdn-integration-dashboard {
+    margin-top: 20px;
+}
+
+.dashboard-intro {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.dashboard-card {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #f8f9fa;
+}
+
+.card-header h2, 
+.card-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+/* Status List */
+.status-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.status-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.status-list li:last-child {
+    border-bottom: none;
+}
+
+.status-label {
+    font-weight: 500;
+    color: #50575e;
+}
+
+.status-value {
+    font-weight: 600;
+}
+
+.status-success {
+    color: #2ab41c;
+}
+
+.status-warning {
+    color: #f0b849;
+}
+
+.status-error {
+    color: #d94f4f;
+}
+
+.status-inactive {
+    color: #72777c;
+}
+
+.status-unknown {
+    color: #8c8f94;
+}
+
+/* Workflow Steps */
+.workflow-steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: workflow-counter;
+}
+
+.workflow-steps li {
+    position: relative;
+    padding: 20px 0 20px 40px;
+    border-left: 2px solid #e2e4e7;
+    margin-left: 20px;
+}
+
+.workflow-steps li:last-child {
+    border-left: 2px solid transparent;
+}
+
+.workflow-steps li:before {
+    counter-increment: workflow-counter;
+    content: counter(workflow-counter);
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #50575e;
+    font-weight: 600;
+}
+
+.workflow-steps li.step-completed:before {
+    content: "✓";
+    background-color: #2ab41c;
+    color: #fff;
+}
+
+.workflow-steps li.step-current:before {
+    background-color: #3582c4;
+    color: #fff;
+}
+
+.workflow-steps li.step-disabled {
+    opacity: 0.6;
+}
+
+.workflow-steps h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.workflow-steps p {
+    margin: 0 0 15px 0;
+    color: #50575e;
+}
+
+/* Quick Actions */
+.quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.action-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #e2e4e7;
+    transition: all 0.2s ease;
+    color: #3582c4;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #f0f0f1;
+    border-color: #c5c5c5;
+    color: #135e96;
+}
+
+.action-button.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.action-button .dashicons {
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 8px;
+}
+
+.action-label {
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
